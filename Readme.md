@@ -57,13 +57,15 @@ In such cases, the Sidecar pattern can be used to solve the problem. The Sidecar
 
 ## What was a major problem you encountered while maintaining a production cluster? *
 
+Incorrect configuration of the cluster, which is the main reason for the cluster to fail.
+
 ## What is an Operator? Why might you need one? *
 
 Operators are Kubernetes software extensions that use custom resources to manage applications and their components. Kubernetes principles, particularly the control loop, are followed by operators. Kubernetes operators make these processes scalable, repeatable, and standardized by removing difficult manual application management tasks.
 
 ## When would you use Minikube? *
 
-Minik
+Minikube is a tool that allows you to run Kubernetes (k8s) on your local machine. It builds a single node cluster within a virtual machine (VM). This cluster allows you to test Kubernetes operations without having to install full-fledged K8s, which takes time and resources. Minikube is especially useful for those who are new to k8s because it allows you to become acquainted with basic concepts. Minikube's primary goal is to quickly set up local Kubernetes clusters; therefore, using minikube in production or for listening to remote traffic is strongly discouraged.
 
 Deployments
 
@@ -133,8 +135,16 @@ You are asked by an engineer to help troubleshoot a service that's malfunctionin
 
 ## What can you already tell from the problem description? *
 
+The container processes exit after starting the container which makes the logs unavailable.
+
 ## What about the separation of concern? *
+
+Separation of concerns is a software architecture design pattern/principle that divides an application into distinct sections, with each section addressing a different concern.
 
 ## Logging outside the container? *
 
+Mount a volume to the container and use docker exec to access the volume.
+
 ## Fit: Hopefully the candidate asks a question or two, doesn't get judgemental/condescending *
+
+It's  okay to ask questions to better understand the problem and be able to avoid the same problem in the future.
